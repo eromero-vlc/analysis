@@ -340,8 +340,8 @@ int main(int argc, char *argv[])
   std::cout << "Ward ID Okay?" << std::endl;
   for ( int s = 0; s < 4; ++s )
     {
-      std::complex<double> DIFF = GPD(s,0)*(Ef-Ei)-GPD(s+4,0)*(2*PI/Lx)*(mom_f[0]-mom_i[0])-
-	GPD(s+8,0)*(2*PI/Lx)*(mom_f[1]-mom_i[1])-GPD_3.mat(s,0)*(2*PI/Lx)*(mom_f[2]-mom_i[2]);
+      std::complex<double> DIFF = GPD(s,0)*(Ef-Ei)-GPD(s+4,0)*(2*PI/Lx)*((double)mom_f[0]-mom_i[0])-
+	GPD(s+8,0)*(2*PI/Lx)*((double)mom_f[1]-mom_i[1])-GPD_3.mat(s,0)*(2*PI/Lx)*((double)mom_f[2]-mom_i[2]);
       std::cout << "Ward (sdx = " << s << " ) = " << DIFF << std::endl;
     }
 
